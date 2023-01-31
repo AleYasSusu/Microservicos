@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.List;
 @RequestMapping(value = "/workers")
 @RequiredArgsConstructor
 @Slf4j
+@RefreshScope
 public class WorkerResource {
     private final WorkerRepository workerRepository;
 
